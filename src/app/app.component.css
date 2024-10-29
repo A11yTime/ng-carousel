@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #f9f9f9; /* Optional: Set a background color */
+  }
+  
+  .carousel {
+    /* Ensure the carousel styles remain */
+    overflow: hidden;
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+  }
+  

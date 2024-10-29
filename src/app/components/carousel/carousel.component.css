@@ -1,0 +1,87 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 90%; /* Set the width to 90% */
+  height: 400px; /* Define a fixed height for the carousel */
+  background-color: #f0f0f0; /* Background color */
+  border: 1px solid #ccc; /* Optional border */
+  margin: 0 auto; /* Center the carousel horizontally */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.05s ease-in-out; /* Shortened transition duration */
+}
+
+.carousel-item {
+  min-width: 100%; /* Show one image at a time */
+  height: 100%; /* Ensure the item takes the full height of the carousel */
+  display: flex; /* Center content if needed */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+
+.carousel-item img {
+  max-width: 100%; /* Ensure image fits within the container */
+  max-height: 100%; /* Ensure image fits within the container */
+  object-fit: cover; /* Crop the image if it doesn't fit the container */
+}
+
+.carousel-button {
+  position: absolute;
+  top: 10px; /* Adjust as needed for vertical positioning */
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  border: none; /* Remove default button border */
+  padding: 5px 10px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer */
+}
+.carousel-button {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+.carousel:hover .carousel-button,
+.carousel-button:focus {
+  opacity: 1; /* Make it visible when focused */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional background */
+}
+
+
+.prev {
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* Media queries for responsiveness */
+
+@media (max-width: 768px) {
+  .carousel {
+    aspect-ratio: 4 / 3; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .carousel-button {
+    padding: 4px 8px; /* Adjust button size for smaller screens */
+  }
+  .carousel {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    aspect-ratio: 1 / 1; /* Make carousel square on very small screens */
+  }
+
+  .carousel-button {
+    padding: 3px 6px; /* Further adjust button size */
+  }
+  .carousel {
+    height: 15rem;
+  }
+}
